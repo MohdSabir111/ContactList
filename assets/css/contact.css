@@ -1,0 +1,44 @@
+#container{
+    display: flex;
+    background-color: lightgray;
+    
+}
+ul , form{
+    /* border: 1px dotted black; */
+}
+
+ul{
+    width:300px;
+    margin: 10px;
+    margin-left: 450px;
+}
+li{
+    list-style: none;
+    padding: 5px;
+}
+
+li:nth-child(2n+1){
+    background-color: grey;
+}
+li:nth-child(2n){
+    background-color: rgb(185, 179, 179);
+}
+
+form{
+    width: 200px;
+    margin: 10px;
+}
+
+input , button{
+    margin-top: 10px;
+}
+
+#head{
+    text-align: center;
+}
+h3{
+    margin: 5px;
+}
+p{
+    margin: 5px;
+}

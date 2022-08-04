@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>ContactList</title>
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+
+    <h1 id="head">CONTACTS</h1>
+    <div id="container">
+        <ul>
+        <% for(let obj of ContactList){ %>
+        
+            <li>
+                <h3>
+                    <%= obj.name %> 
+                </h3>
+                <p>
+                    <%= obj.mobile %> 
+                </p>
+
+                <!-- <a href="/deleteContact/<= obj._id %>">X</a> -->
+                <a href="/deleteContact/?id=<%= obj._id %> ">X</a>
+            </li>
+        
+    <% } %>
+        </ul>
+
+        <form method="POST" action="/addContact">
+
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="mobile"  placeholder="mobile">
+        <!-- <textarea placeholder="Enter description here" name="comment" rows="4" cols="20"></textarea> -->
+        <button type="submit">ADD CONTACT</button>
+
+        </form>
+    </div> 
+
+
+    
+    
+</body>
+</html>
